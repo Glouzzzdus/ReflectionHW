@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+	<ApplicationSettings>
+		<Setting6>Hello XML</Setting6>
+		<Setting7>123</Setting7>
+		<Setting8>99.99</Setting8>
+		<Setting9>00:00:05</Setting9>
+		<Setting10>11/11/2023</Setting10>
+	</ApplicationSettings>
+</Settings>
