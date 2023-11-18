@@ -9,10 +9,10 @@ namespace HWReflection
     [AttributeUsage(AttributeTargets.Property)]
     public class ConfigurationItemAttribute : Attribute
     {
-        public string SettingName { get; }
-        public Type ProviderType { get; }
+        public string SettingName { get; set; }
+        public ProviderType ProviderType { get; set; }
 
-        public ConfigurationItemAttribute(string settingName, Type providerType)
+        public ConfigurationItemAttribute(string settingName, ProviderType providerType)
         {
             SettingName = settingName;
             ProviderType = providerType;
