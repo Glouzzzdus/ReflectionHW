@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionHW", "ReflectionHW.csproj", "{DD9981BC-E6E3-47F8-A1CE-2852D2AC2C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionHW", "ReflectionHW.csproj", "{DD9981BC-E6E3-47F8-A1CE-2852D2AC2C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConfigurationProviderLib", "..\FileConfigurationProviderLib\FileConfigurationProviderLib.csproj", "{8E119F40-B7A7-48BC-B851-B7CA38004558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationManagerConfigurationProviderLib", "..\ConfigurationManagerConfigurationProviderLib\ConfigurationManagerConfigurationProviderLib.csproj", "{40CFB22D-5C53-4B6D-9962-A8EF59CC93DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DD9981BC-E6E3-47F8-A1CE-2852D2AC2C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD9981BC-E6E3-47F8-A1CE-2852D2AC2C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD9981BC-E6E3-47F8-A1CE-2852D2AC2C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E119F40-B7A7-48BC-B851-B7CA38004558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E119F40-B7A7-48BC-B851-B7CA38004558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E119F40-B7A7-48BC-B851-B7CA38004558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E119F40-B7A7-48BC-B851-B7CA38004558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CFB22D-5C53-4B6D-9962-A8EF59CC93DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CFB22D-5C53-4B6D-9962-A8EF59CC93DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CFB22D-5C53-4B6D-9962-A8EF59CC93DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CFB22D-5C53-4B6D-9962-A8EF59CC93DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

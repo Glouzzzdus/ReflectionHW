@@ -21,4 +21,12 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="plugins\" />
+  </ItemGroup>
+
+	<PropertyGroup>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
 </Project>
