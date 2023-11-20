@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using IConfigurationProvider = HWReflection.IConfigurationProvider;
 
 public class ConfigurationComponentBase
 {
