@@ -38,23 +38,36 @@ public class ConfigurationComponentBase
         }
     }
 
-    public void LoadSettings(ProviderType providerType, MyConfigurationClass configClass)
+    public void LoadSettings(MyConfigurationClass configClass)
     {
-        if (!_configurationProviders.ContainsKey(providerType))
+        foreach (PropertyInfo property in configClass.GetType().GetProperties())
         {
-            throw new InvalidOperationException($"No provider found for ProviderType '{providerType}'.");
-        }
+            ConfigurationItemAttribute attribute = property.GetCustomAttribute(typeof(ConfigurationItemAttribute)) as ConfigurationItemAttribute;
+            if (attribute != null)
+            {
+                if (!_configurationProviders.ContainsKey(attribute.ProviderType))
+                {
+                    throw new InvalidOperationException($"No provider found for ProviderType '{attribute.ProviderType}'.");
+                }
 
-        _configurationProviders[providerType].LoadSettingsFromSource(configClass);
+                _configurationProviders[attribute.ProviderType].LoadSettingsFromSource(property, configClass);
+            }
+        }
     }
 
-    public void SaveSettings(ProviderType providerType, MyConfigurationClass configClass)
+    public void SaveSettings(MyConfigurationClass configClass)
     {
-        if (!_configurationProviders.ContainsKey(providerType))
+        foreach (PropertyInfo property in configClass.GetType().GetProperties())
         {
-            throw new InvalidOperationException($"No provider found for ProviderType '{providerType}'.");
+            ConfigurationItemAttribute attribute = property.GetCustomAttribute(typeof(ConfigurationItemAttribute)) as ConfigurationItemAttribute;
+            if (attribute != null)
+            {
+                if (!_configurationProviders.ContainsKey(attribute.ProviderType))
+                {
+                    throw new InvalidOperationException($"No provider found for ProviderType '{attribute.ProviderType}'.");
+                }
+                _configurationProviders[attribute.ProviderType].SaveSettingsToSource(property, configClass);
+            }
         }
-
-        _configurationProviders[providerType].SaveSettingsToSource(configClass);
     }
 }

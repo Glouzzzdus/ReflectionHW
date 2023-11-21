@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace HWReflection
 {
-    public class MyConfigurationClass : ConfigurationComponentBase
+    public class MyConfigurationClass
     {
         [ConfigurationItem("Setting1", ProviderType.ConfigurationManager)]
         public string? Setting1 { get; set; }
